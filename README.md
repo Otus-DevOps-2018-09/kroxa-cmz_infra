@@ -1,5 +1,5 @@
 # kroxa-cmz_infra
-kroxa-cmz Infra repository
+kroxa Infra repository
 
 Homework #3 
 
