@@ -1,7 +1,7 @@
 # kroxa-cmz_infra
 kroxa-cmz Infra repository
 
-Homework 3 
+Homework #3 
 
 ssh -A -J <user>@<bastion_IP> <someinternalhost_IP>
 
