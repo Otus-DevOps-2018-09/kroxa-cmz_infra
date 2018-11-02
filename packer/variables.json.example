@@ -1,7 +1,5 @@
 {
-  "variables": {
     "kr_project_id": "infra-220718",
     "kr_source_image_family": "ubuntu-1604-lts",
     "kr_machine_type": "f1-micro"
-  }
 }
