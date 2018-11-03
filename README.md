@@ -2,6 +2,7 @@
 
 kroxa-cmz Infra repository
 
-Homework #5
+Модуль command удалил директорию, а playbook снова создал ее 
 
-Complete HW without * 
+
+All tasks without *
