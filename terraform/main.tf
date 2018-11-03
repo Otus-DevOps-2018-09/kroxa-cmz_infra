@@ -20,7 +20,7 @@ resource "google_compute_instance" "app" {
     type        = "ssh"
     user        = "appuser"
     agent       = false
-    private_key = "${file(var.pr_key_path)}"
+#    private_key = "${file(var.pr_key_path)}"
   }
 
   provisioner "file" {
@@ -37,9 +37,9 @@ resource "google_compute_instance" "app" {
     access_config = {}
   }
 
-  metadata {
-    ssh-keys = "appuser:${file(var.public_key_path)}"
-  }
+#  metadata {
+#    ssh-keys = "appuser:${file(var.public_key_path)}"
+#  }
 }
 
 resource "google_compute_firewall" "firewall_puma" {
