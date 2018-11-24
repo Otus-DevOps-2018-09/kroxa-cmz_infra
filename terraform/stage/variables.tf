@@ -7,17 +7,22 @@ variable region {
   default     = "europe-west1"
 }
 
-#variable public_key_path {
-#  description = "/home/user/Documents/keys/appuser"
-#}
+variable public_key_path {
+  description = "/home/user/Documents/keys/appuser"
+  default = "/home/user/Documents/keys/appuser.pub"
+}
+
 
 variable disk_image {
   description = "reddit-base"
 }
 
-#variable pr_key_path {
-#  description = "/home/user/Documents/keys/appuser"
-#}
+
+variable pr_key_path {
+  description = "/home/user/Documents/keys/appuser"
+  default = "/home/user/Documents/keys/appuser"
+}
+
 
 variable zone {
   description = "Zone"

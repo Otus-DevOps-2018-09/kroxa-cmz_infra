@@ -1,6 +1,8 @@
-#variable public_key_path {
-#  description = "Path to the public key used to connect to instance"
-#}
+variable public_key_path {
+  description = "Path to the public key used to connect to instance"
+  default = "~/Documents/keys/appuser.pub"
+}
+
 
 variable zone {
   description = "Zone"

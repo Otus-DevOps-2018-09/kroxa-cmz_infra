@@ -3,9 +3,10 @@ variable db_disk_image {
   default     = "reddit-db-base"
 }
 
-#variable public_key_path {
-#  description = "/home/user/Documents/keys/appuser"
-#}
+variable public_key_path {
+  description = "/home/user/Documents/keys/appuser"
+  default = "/home/user/Documents/keys/appuser.pub"
+}
 
 variable zone {
   description = "Zone"

@@ -18,9 +18,10 @@ resource "google_compute_instance" "app" {
     }
   }
 
-#  metadata {
-#    sshKeys = "appuser:${file(var.public_key_path)}"
-#  }
+  metadata {
+    sshKeys = "appuser:${file(var.public_key_path)}"
+  }
+
 }
 
 resource "google_compute_address" "app_ip" {
