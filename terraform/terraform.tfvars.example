@@ -2,4 +2,6 @@ project = "infra-220718"
 
 public_key_path = "~/Documents/keys/appuser.pub"
 
+pr_key_path = "~/Documents/keys/appuser"
+
 disk_image = "reddit-base"

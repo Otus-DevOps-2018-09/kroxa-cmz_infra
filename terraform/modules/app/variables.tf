@@ -3,6 +3,7 @@ variable public_key_path {
   default = "~/Documents/keys/appuser.pub"
 }
 
+
 variable zone {
   description = "Zone"
 }
