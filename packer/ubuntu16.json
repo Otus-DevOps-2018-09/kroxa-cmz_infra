@@ -2,6 +2,7 @@
     "builders": [
         {
             "type": "googlecompute",
+
             "project_id": "{{user `kr_project_id`}}", 
             "image_name": "reddit-base-{{timestamp}}",
             "image_family": "reddit-base",

@@ -1,10 +1,7 @@
-<<<<<<< HEAD
+
 packer/variables.json
-=======
 *.tfstate
 *.tfstate.*.backup
 *.tfstate.backup
 *.tfvars
 .terraform/
-
->>>>>>> 1112aaea7756e7c45c734c445f9c13ec0c0ceb34
