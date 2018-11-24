@@ -47,12 +47,5 @@
       "network": "{{user `network`}}",
       "ssh_username": "appuser"
     }
-  ],
-  "provisioners": [
-    {
-      "type": "shell",
-      "script": "{{template_dir}}/scripts/install_ruby.sh",
-      "execute_command": "sudo {{.Path}}"
-    }
   ]
 }
