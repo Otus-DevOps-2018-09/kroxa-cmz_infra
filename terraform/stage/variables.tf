@@ -12,14 +12,17 @@ variable public_key_path {
   default = "/home/user/Documents/keys/appuser.pub"
 }
 
+
 variable disk_image {
   description = "reddit-base"
 }
+
 
 variable pr_key_path {
   description = "/home/user/Documents/keys/appuser"
   default = "/home/user/Documents/keys/appuser"
 }
+
 
 variable zone {
   description = "Zone"
