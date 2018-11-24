@@ -1,9 +1,8 @@
 # kroxa-cmz_infra
-kroxa Infra repository
 
-Homework #3 
+kroxa-cmz Infra repository
 
-ssh -A -J <user>@<bastion_IP> <someinternalhost_IP>
+Homework #4 with travis 
 
-bastion_IP = 35.195.60.23 
-someinternalhost_IP = 10.132.0.3
+testapp_IP = 35.204.89.33
+testapp_port = 9292 
