@@ -1,4 +1,24 @@
 {
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `kr_project_id`}}", 
+            "image_name": "db-base-{{timestamp}}",
+            "image_family": "db-base",
+            "source_image_family": "{{user `kr_source_image_family`}}",
+            "zone": "europe-west1-b",
+            "ssh_username": "appuser",
+            "machine_type": "{{user `kr_machine_type`}}"
+        }
+    ],
+
+"provisioners": [ 
+        { 
+            "type": "ansible", 
+            "playbook_file": "ansible/packer_db.yml" 
+        } 
+    ] 
+=======
   "variables": {
     "project_id": "infra-220718",
     "zone": "europe-west1-b",
