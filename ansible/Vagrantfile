@@ -1,0 +1,52 @@
+Vagrant.configure("2") do |config|
+	config.vm.box = "google/gce"
+    config.vm.provision "ansible" do |ansible|
+	           ansible.playbook = "playbooks/site.yml"
+	           ansible.groups = {
+	           "db" => ["dbserver"],
+	           "db:vars" => {"mongo_bind_ip" => "0.0.0.0"}
+	           }
+	           ansible.groups = {
+	           "app" => ["appserver"],
+               "app:vars" => { "db_host" => "10.10.10.10"}
+}
+	        end
+    config.vm.define :dbserver do |db|
+    db.vm.provider :google do |google, override|
+	  	google.google_project_id = "infra-220718"
+	    google.google_client_email = "fedderro@gmail.com"
+	    google.google_json_key_location = "/home/user/Documents/keys/Infra-ffa2344a9cec.json"
+	    google.image_family = 'ubuntu-1604-lts'
+	    google.machine_type = "f1-micro"
+	    google.disk_size = "10"
+	    google.zone = "europe-west1-b"
+        override.ssh.username = "appuser"
+        override.ssh.private_key_path = "/home/user/Documents/keys/appuser"
+        
+        google.zone_config "europe-west1-b" do |db|
+            db.name = "dbserver" 
+		    
+        end
+	  end
+    end
+
+    config.vm.define :appserver do |app|
+
+	  app.vm.provider :google do |google, override|
+	  	google.google_project_id = "infra-220718"
+	    google.google_client_email = "fedderro@gmail.com"
+	    google.google_json_key_location = "/home/user/Documents/keys/Infra-ffa2344a9cec.json"
+	    google.image_family = 'ubuntu-1604-lts'
+	    google.machine_type = "f1-micro"
+	    google.disk_size = "10"
+	    google.zone = "europe-west1-b"
+        override.ssh.username = "appuser"
+        override.ssh.private_key_path = "/home/user/Documents/keys/appuser"
+	    
+	    google.zone_config "europe-west1-b" do |app|
+	    	app.name = "appserver"
+   
+	    end
+	  end
+    end
+end

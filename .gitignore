@@ -10,3 +10,9 @@ terraform/stage/.terraform
 terraform/prod/.terraform
 *.retry
 ansible/jdauphant.nginx
+.vagrant/ 
+*.log 
+*.pyc 
+.molecule 
+.cache 
+.pytest_cache
