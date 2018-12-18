@@ -15,11 +15,12 @@
 "provisioners": [ 
         { 
             "type": "ansible", 
-            "playbook_file": "ansible/packer_db.yml" 
+            "playbook_file": "ansible/playbooks/packer_db.yml" 
         } 
-    ] 
-=======
-  "variables": {
+    ], 
+
+  "variables": 
+  {
     "project_id": "infra-220718",
     "zone": "europe-west1-b",
     "machine_type": "f1-micro",
